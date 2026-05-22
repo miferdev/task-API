@@ -10,6 +10,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("api/tareas")
+@CrossOrigin(origins = "*")
 public class TareaController {
     //VARIABLE PARA PODER ACCEDER A BD
     @Autowired
@@ -54,6 +55,11 @@ public class TareaController {
         tareaRep.deleteById(id);
         return ResponseEntity.noContent().build();
     }
-
+    @GetMapping("/buscar")
+    public ResponseEntity<Tarea> buscarTarea(@RequestParam Long id){
+        return tareaRep.findById(id)
+                .map(ResponseEntity::ok)
+                .orElse(ResponseEntity.notFound().build());
+    }
 
 }
