@@ -6,4 +6,6 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import java.util.List;
 
 //PERMITE INTERACTUAR CON BD A TRAVÉS DE LA TABLA Y SU PK
-public interface TareaRepository extends JpaRepository<Tarea, Long> {}
+public interface TareaRepository extends JpaRepository<Tarea, Long> {
+    List<Tarea> findByTitle(String title);
+}
