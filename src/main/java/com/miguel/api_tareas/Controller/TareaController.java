@@ -56,10 +56,10 @@ public class TareaController {
         return ResponseEntity.noContent().build();
     }
     @GetMapping("/buscar")
-    public ResponseEntity<Tarea> buscarTarea(@RequestParam Long id){
-        return tareaRep.findById(id)
-                .map(ResponseEntity::ok)
-                .orElse(ResponseEntity.notFound().build());
+    public ResponseEntity<List<Tarea>> buscarTarea(@RequestParam String title){
+        List<Tarea> res = tareaRep.findByTitleContainingIgnoreCase(title);
+
+        return ResponseEntity.ok(res);
     }
 
 }

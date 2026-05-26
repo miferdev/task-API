@@ -7,5 +7,5 @@ import java.util.List;
 
 //PERMITE INTERACTUAR CON BD A TRAVÉS DE LA TABLA Y SU PK
 public interface TareaRepository extends JpaRepository<Tarea, Long> {
-    List<Tarea> findByTitle(String title);
+    List<Tarea> findByTitleContainingIgnoreCase(String title);
 }
