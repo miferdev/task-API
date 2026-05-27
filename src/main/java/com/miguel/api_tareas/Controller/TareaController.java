@@ -62,4 +62,11 @@ public class TareaController {
         return ResponseEntity.ok(res);
     }
 
+    @GetMapping("/estado")
+    public ResponseEntity<List<Tarea>> completadas(@RequestParam Boolean completada){
+        List<Tarea> res = tareaRep.findByCompletada(completada);
+
+        return ResponseEntity.ok(res);
+    }
+
 }
