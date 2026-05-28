@@ -1,4 +1,4 @@
-package com.miguel.api_tareas.Model;
+package com.miguel.api_tareas.domain.model;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;

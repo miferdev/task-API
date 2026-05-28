@@ -1,6 +1,6 @@
 package com.miguel.api_tareas.Repository;
 
-import com.miguel.api_tareas.Model.Tarea;
+import com.miguel.api_tareas.domain.model.Tarea;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.List;

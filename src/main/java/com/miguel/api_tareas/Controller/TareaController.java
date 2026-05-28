@@ -1,6 +1,6 @@
 package com.miguel.api_tareas.Controller;
 
-import com.miguel.api_tareas.Model.Tarea;
+import com.miguel.api_tareas.domain.model.Tarea;
 import com.miguel.api_tareas.Repository.TareaRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
